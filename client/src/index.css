@@ -5,6 +5,56 @@
   box-sizing: border-box;
 }
 
+/* Page not found CSS */
+.pnf{
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title{
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading{
+  font-weight: normal;
+}
+
+.pnf-btn{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* about page CSS */
+.aboutus{
+  justify-content: center;
+  justify-items: center;
+  margin-top: 40px;
+  display: flex;
+}
+
+.contactus{
+  justify-content: center;
+    justify-items: center;
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.policy{
+  justify-content: center;
+    justify-items: center;
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
 /* font-family: 'poppins', sans-serif; */
 /* font-family: 'Playfair Display',serif; */
 
@@ -17,52 +67,61 @@
   text-transform: uppercase;
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
-  background: -webkit-linear-gradient(to right, #01aaa2, #003e56);
-  background: linear-gradient(to right,#01aaa2,#003e56);
+  background: -webkit-linear-gradient(to right, #77dcf8, #cbebec);
+  background: linear-gradient(to right,#77dcf8,#cbebec);
 }
 
 .nav-link{
   font-weight: 300;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .nav-link:hover{
-  color: #ffefba;
-  border-bottom: 2px solid #ffefba;
+  color: #f6be06;
+  border-bottom: 2px solid #f6be06;
 }
 
 .active{
-  color:  #ffefba;
-  border-bottom: 2px solid #ffefba;
+  color:  #f6be06;
+  border-bottom: 2px solid #f6be06;
 }
 
 .navbar-brand{
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-family: 'roboto', sans-serif;
   letter-spacing: 3px;
 }
 .navbar-brand:hover{
-  color: #ffefba;
+  color: #f6be06;
 }
 
 /* Footer CSS */
 .footer{
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 25px;
   background: #000000;
-  background: -webkit-linear-gradient(to right, #01aaa2, #003e56);
+  background: -webkit-linear-gradient(to right, #77dcf8, #cbebec);
   background: linear-gradient(to right,
-    #01aaa2,
-    #003e56);
+    #77dcf8,
+    #cbebec);
 }
 
 .footer a{
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 10px;
 }
 
 .footer a:hover{
-  color: #ffefba;
-  border-bottom: 1px solid #ffefba;
+  color: #f6be06;
+  border-bottom: 1px solid #f6be06
+}
+
+/* Register page CSS */
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  flex-direction: column;
 }
