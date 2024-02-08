@@ -116,12 +116,3 @@
   color: #f6be06;
   border-bottom: 1px solid #f6be06
 }
-
-/* Register page CSS */
-.register{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
-  flex-direction: column;
-}
