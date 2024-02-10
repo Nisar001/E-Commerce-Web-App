@@ -6,8 +6,8 @@ const HomePage = () => {
   const [auth, setAuth] = useAuth();
 
   return (
-    <Layout title={'Home'}>
-      <h1>Home PAge</h1>
+    <Layout title={'Best Offers'}>
+      <h1>Home Page</h1>
       <pre>{JSON.stringify(auth, null, 4)}</pre>
     </Layout>
   )
