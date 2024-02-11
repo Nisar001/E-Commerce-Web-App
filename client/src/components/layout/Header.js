@@ -3,6 +3,7 @@ import {NavLink, Link} from 'react-router-dom'
 import {CiShop} from 'react-icons/ci'
 import { useAuth } from '../../context/auth'
 import toast from 'react-hot-toast'
+import Dashboard from './../../pages/user/Dashboard';
 
 const Header = () => {
 
@@ -45,9 +46,17 @@ const Header = () => {
           </>
           ) : (
           <>
-          <li className="nav-item">
-          <NavLink  to="/login" onClick={handleLogout} className="nav-link">Logout</NavLink>
-        </li>
+          <li className="nav-item dropdown">
+            <NavLink className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {auth?.user?.name}
+            </NavLink>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><NavLink className="dropdown-item" to="/dashboard">Dashboard</NavLink>
+          </li>
+          <li><NavLink  to="/login" onClick={handleLogout} className="dropdown-item">Logout</NavLink></li>
+            </ul>
+          </li>
+
           </>
           )
         }

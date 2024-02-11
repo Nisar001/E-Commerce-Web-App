@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import Layout from '../../components/layout/Layout'
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 import toast from 'react-hot-toast';
 import '../../styles/AuthStyles.css';
 import { useAuth } from '../../context/auth';
-import { set } from 'mongoose';
 
 
 const Login = () => {
@@ -14,6 +13,7 @@ const Login = () => {
    const [password, setPassword] = useState("")
    const [auth, setAuth] = useAuth();
    const navigate = useNavigate();
+   const location = useLocation();
 
    const handleSubmit = async (e) => {
       e.preventDefault();
@@ -28,7 +28,7 @@ const Login = () => {
               token: res.data.token,
             });
             localStorage.setItem('auth', JSON.stringify(res.data));
-            navigate('/')
+            navigate(location.state || '/')
          }else{
             toast.error(res.data.message)
          }
@@ -50,11 +50,11 @@ const Login = () => {
             <div className="mb-3">
                <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} className="form-control" id="exampleInputPassword1" placeholder='Enter Your Password' required/>
             </div>
-            <div className="mb-3 form-check">
-               <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-               <label className="form-check-label" htmlFor="exampleCheck1">Remember Me</label>
+
+            <div className='mb-3'>
+               <button type="submit" onClick={() => {navigate('/forgot-password')}} className="btn btn-primary">Forgot Password ?</button>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary">Login</button>
          </form>
       </div>
     </Layout>
