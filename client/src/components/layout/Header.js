@@ -3,7 +3,6 @@ import {NavLink, Link} from 'react-router-dom'
 import {CiShop} from 'react-icons/ci'
 import { useAuth } from '../../context/auth'
 import toast from 'react-hot-toast'
-import Dashboard from './../../pages/user/Dashboard';
 
 const Header = () => {
 
