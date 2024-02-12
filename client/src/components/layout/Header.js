@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink, Link} from 'react-router-dom'
 import {CiShop} from 'react-icons/ci'
-import { useAuth } from '../../context/auth'
+import { useAuth } from '../../context/auth.js'
 import toast from 'react-hot-toast'
 
 const Header = () => {
@@ -50,7 +50,7 @@ const Header = () => {
               {auth?.user?.name}
             </NavLink>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><NavLink className="dropdown-item" to="/dashboard">Dashboard</NavLink>
+          <li><NavLink className="dropdown-item" to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}>Dashboard</NavLink>
           </li>
           <li><NavLink  to="/login" onClick={handleLogout} className="dropdown-item">Logout</NavLink></li>
             </ul>
